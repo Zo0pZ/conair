@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>ConAir Logo — SVG vs Original</title>
+<style>
+  body { background: #1a1a1a; color: #ccc; font-family: Arial, Helvetica, sans-serif; padding: 40px; }
+  h2 { color: #fff; font-weight: normal; font-size: 16px; margin: 0 0 12px; }
+  .panel { display: inline-block; vertical-align: top; margin: 0 30px 30px 0; }
+  .stage { position: relative; width: 350px; height: 150px; background: #000; }
+
+  /* Original — live site assets and CSS, replicated exactly */
+  .fanContainer, .fanContainer img { border-radius: 50%; height: 75px; overflow: hidden; width: 75px; }
+  .fanContainer { background: #000; display: block; left: 255px; position: absolute; top: 29px; }
+  .box_animation { animation: spin 5.5s infinite linear; }
+  @keyframes spin { from { transform: rotate(0); } to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<div class="panel">
+  <h2>Original (live site JPG + PNG fan)</h2>
+  <div class="stage">
+    <img src="https://www.conair-extractsolutions.co.uk/wp-content/uploads/2015/08/fullsizeLogo1.jpg" width="350" height="150" alt="Original logo">
+    <span class="fanContainer">
+      <img class="box_animation" src="https://www.conair-extractsolutions.co.uk/wp-content/themes/adapt-child/images/fan.png" alt="Fan">
+    </span>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>New SVG (single file, fan animation built in)</h2>
+  <div class="stage">
+    <img src="conair-logo.svg" width="350" height="150" alt="SVG logo">
+  </div>
+</div>
+
+<p>The SVG scales to any size with no quality loss — fan keeps spinning at the same 5.5s/revolution:</p>
+<img src="conair-logo.svg" width="700" alt="SVG logo at 2x">
+
+</body>
+</html>
